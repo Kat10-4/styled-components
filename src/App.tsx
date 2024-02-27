@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {StyledBtn, SuperBtn} from "./components/Button.styled";
 import {Link} from "./components/Link.styled";
 import {Menu} from "./components/Menu.styled";
+import {myTheme} from "./styles/animations/Theme.styled";
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
             <Box>
                 {/*<StyledBtn as={Link} href={'#'}>linkComponent</StyledBtn>*/}
                 {/*<StyledBtn as="a" href={'#'}>link</StyledBtn>*/}
-                <StyledBtn color={'red'} fontSize={"20px"}>Hello</StyledBtn>
-                <StyledBtn color={'green'}>Hello</StyledBtn>
-                <StyledBtn fontSize={"20px"}>Hello</StyledBtn>
+                {/*<StyledBtn color={'red'} fontSize={"20px"}>Hello</StyledBtn>*/}
+                {/*<StyledBtn color={'green'}>Hello</StyledBtn>*/}
+                <StyledBtn color={myTheme.colors.primary} btnType={'primary'} active>Hello</StyledBtn>
+                <StyledBtn color={myTheme.colors.secondary} btnType={'outlined'}>Hello</StyledBtn>
                 {/*<SuperBtn>World</SuperBtn>*/}
             </Box>
         </div>
@@ -43,9 +45,9 @@ const Box = styled.div`
 
     ${Link} {
         cursor: zoom-in;
-    } 
+    }
 
-@media  screen and (max-width: 800px) {
-    flex-direction: column;
-}`
+    @media ${myTheme.media.tablet} {
+        flex-direction: column;
+    }`
 

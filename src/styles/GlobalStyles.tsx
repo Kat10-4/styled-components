@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {myTheme} from "./animations/Theme.styled";
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -10,5 +11,5 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    background-color: aliceblue;
+    background-color: ${myTheme.colors.grey.dark};
 }`
